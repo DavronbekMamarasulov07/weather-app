@@ -10,7 +10,8 @@ const $weatherSunset = document.querySelector("#sunset")
 const $weatherSunrise = document.querySelector("#sunrise")
 const $airPressure = document.querySelector("#air-pressure")
 const $map = document.querySelector("#map");
-
+const $arrow = document.querySelector(".arrow")
+const $header = document.querySelector("#header")
 
 
 // API KEY
@@ -28,6 +29,7 @@ const renderData = (data) => {
     $weatherSunset.innerText = data.forecast.forecastday[0].astro.sunset;
     $weatherSunrise.innerText = data.forecast.forecastday[0].astro.sunrise;
     $airPressure.innerText = data.current.pressure_mb + "Pa";
+    $arrow.style.transform = `rotate(${data.current.wind_degree}deg)`
 
     
 
