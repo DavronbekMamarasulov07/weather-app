@@ -20,7 +20,7 @@ const loadData = (city) =>{
         .then(data => renderData(data))
 }
 
-loadData("Tashkent")
+loadData("Jizzax")
 
 const searchCityWeather = (e) => {
     e.preventDefault()
