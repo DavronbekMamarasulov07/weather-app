@@ -21,10 +21,19 @@ ul{
     max-width: 1200px;
     margin: 0  auto;
     padding: 0 30px;
+}
+#main{
     margin-bottom: 100px;
 }
 
 header{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(45px);
+}
+
+.wrapper-header{
     display: flex;
     align-items: center;
     justify-content: space-between;
