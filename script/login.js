@@ -44,8 +44,7 @@ const loginUser = (e) => {
              }
         })
         .catch(() => {
-            ToastifyPanel("error", "error").showToast();
-
+            ToastifyPanel("Error occurred while logging in", "error").showToast();
         })
 
     

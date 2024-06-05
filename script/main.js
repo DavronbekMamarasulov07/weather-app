@@ -61,7 +61,18 @@ const searchCityWeather = (e) => {
 // eventlisteners
 $searchForm.addEventListener("submit" , searchCityWeather )
 
+const $checkbox = document.querySelector("#theme");
 
+// Event listener for checkbox change
+$checkbox.addEventListener("change", function() {
+    if (this.checked) {
+        // Checkbox is checked, set background color to black
+        document.body.style.backgroundColor = "#4f4169";
+    } else {
+        // Checkbox is not checked, set background color to white
+        document.body.style.backgroundColor = "white";
+    }
+});
 
 
 

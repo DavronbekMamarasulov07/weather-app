@@ -40,12 +40,12 @@ const registerNewUser = (e) => {
                 },2000)
             }
         })
+       
         .catch(() => {
-            ToastifyPanel("error", "error").showToast();
-
+            ToastifyPanel("Error occurred while logging in", "error").showToast();
         })
-}
-
+    }
+    
 
 
 // Eventlistners
