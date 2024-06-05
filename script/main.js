@@ -9,6 +9,7 @@ const $weatherUV = document.querySelector("#uv")
 const $weatherSunset = document.querySelector("#sunset")
 const $weatherSunrise = document.querySelector("#sunrise")
 const $airPressure = document.querySelector("#air-pressure")
+const $map = document.querySelector("#map");
 
 
 
@@ -26,7 +27,7 @@ const renderData = (data) => {
     $weatherUV.innerText = data.current.uv + " out of 10"
     $weatherSunset.innerText = data.forecast.forecastday[0].astro.sunset;
     $weatherSunrise.innerText = data.forecast.forecastday[0].astro.sunrise;
-    $airPressure.innerText = data.current.pressure_mb + "Pa"
+    $airPressure.innerText = data.current.pressure_mb + "Pa";
 
     
 
@@ -37,7 +38,14 @@ const renderData = (data) => {
 const loadData = (city) =>{
     fetch(`https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${city}&days=7&aqi=yes&alerts=yes`)
         .then((response) => response.json())
-        .then(data => renderData(data))
+        .then(data => {
+            renderData(data);
+            updateMap(data.location.lat, data.location.lon); // Update map with new coordinates
+        });
+}
+
+const updateMap = (lat, lon) => {
+    $map.src = `https://maps.google.com/maps?q=${lat},${lon}&t=&z=30&output=embed`;
 }
 
 loadData("Jizzax")
@@ -45,9 +53,13 @@ loadData("Jizzax")
 const searchCityWeather = (e) => {
     e.preventDefault()
     loadData($searchInput.value)
-
-        $searchInput.value = ""
+     $searchInput.value = ""
 }
 
 // eventlisteners
 $searchForm.addEventListener("submit" , searchCityWeather )
+
+
+
+
+
