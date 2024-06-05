@@ -15,12 +15,15 @@
                 <input autocomplete="off" type="text" placeholder="Search any city..." id="search-input" required>
                 <button type="submit"><i class="bi bi-search"></i></button>
             </form>
-            <div class="theme-toggle">
-                <input type="checkbox" id="theme">
-                <label for="theme">
-                    <i class="bi bi-sun-fill"></i>
-                    <i class="bi bi-moon-fill"></i>
-                </label>
+            <div class="header-left">
+                <div class="theme-toggle">
+                    <input type="checkbox" id="theme">
+                    <label for="theme">
+                        <i class="bi bi-sun-fill"></i>
+                        <i class="bi bi-moon-fill"></i>
+                    </label>
+                </div>
+                <a href="./pages/login.html">Login</a>
             </div>
         </header>
         <section id="hero">
@@ -38,51 +41,58 @@
                 </div>
             </div>
         </section>
-        <div class="weather-card-item">
-            <div id="weahter-card-left">
-                <div class="weahter-info-left">
-                    <div class="weahter-info-water add">
-                        <i class=" add-icon bi bi-droplet-half"></i>
-                        <div>
-                            <p>Humidity</p>
-                            <p id="water"></p>
+
+        <section id="main">
+            <div class="map-wrapper">
+                <iframe id="map" src="https://maps.google.com/maps?q=Jizzax%20Dates%10Products&amp;t=&amp;z=30&amp;output=embed" width=100% height="250" allowfullscreen frameborder="0"></iframe>
+            </div>
+            <div class="weather-card-item">
+                <div id="weahter-card-left">
+                    <div class="weahter-info-left">
+                        <div class="weahter-info-water add">
+                            <i class=" add-icon bi bi-droplet-half"></i>
+                            <div>
+                                <p>Humidity</p>
+                                <p id="water"></p>
+                            </div>
+                        </div>
+                        <div class="weahter-info-uv add">
+                            <i class=" add-icon bi bi-brightness-high"></i>
+                            <div>
+                                <p>UV index</p>
+                                <p id="uv"></p>
+                            </div>
                         </div>
                     </div>
-                    <div class="weahter-info-uv add">
-                        <i class=" add-icon bi bi-brightness-high"></i>
-                        <div>
-                            <p>UV index</p>
-                            <p id="uv"></p>
+                    <div class="line"></div>
+                    <div class="weahter-info-right">
+                        <div class="weahter-info-sunsit add">
+                            <i class="add-icon bi bi-sunset"></i>
+                            <div>
+                                <p>Sunset</p>
+                                <p id="sunset"></p>
+                            </div>
+                        </div>
+                        <div class="weahter-info-sunrise add">
+                            <i class="add-icon bi bi-sunrise"></i>
+                            <div>
+                                <p>Sunrise</p>
+                                <p id="sunrise"></p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="line"></div>
-                <div class="weahter-info-right">
-                    <div class="weahter-info-sunsit add">
-                        <i class="add-icon bi bi-sunset"></i>
-                        <div>
-                            <p>Sunset</p>
-                            <p id="sunset"></p>
-                        </div>
+                <div id="weather-card-right">
+                    <div class="air-pressure">
+                        <p id="air-pressure"></p>
                     </div>
-                    <div class="weahter-info-sunrise add">
-                        <i class="add-icon bi bi-sunrise"></i>
-                        <div>
-                            <p>Sunrise</p>
-                            <p id="sunrise"></p>
-                        </div>
+                    <div class="compass">
+                        
                     </div>
                 </div>
             </div>
-            <div id="weather-card-right">
-                <div class="air-pressure">
-                    <p id="air-pressure"></p>
-                </div>
-                <div class="compass">
-                    
-                </div>
-            </div>
-        </div>
+          
+        </section>
     </div>
 
     <script src="./script/main.js"></script>

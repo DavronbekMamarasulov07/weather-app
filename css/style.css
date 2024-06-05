@@ -103,6 +103,8 @@ header h2{
     height: 26px;
     border: 1px solid gray;
     border-radius: 20px;
+    display: flex;
+    align-items: center;
 }
 
 .theme-toggle input{
@@ -156,6 +158,12 @@ header h2{
     background-position: bottom;
  }
 
+ .header-left{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+ }
+
 .hero-content{ 
     height: 100%;
     overflow: hidden;
@@ -167,6 +175,15 @@ header h2{
     padding: 30px;
     display: flex;
     align-items: flex-end;
+}
+
+header a{
+    font-size: 18px;
+    padding: 6px 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 10px;
+    border-radius: 10px;
+    background: blueviolet;
+    color: #fff;
 }
 
 #hero::after{
@@ -201,7 +218,7 @@ header h2{
 }
 
 #weahter-card-left{
-    max-width: 550px;
+    max-width: 600px;
     width: 100%;
     background-color: #fff;
     padding: 30px 50px;
@@ -211,9 +228,9 @@ header h2{
     justify-content: space-between;
     border-radius: 20px;
     margin-top: 40px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: 0px 0px 10px rgba(159, 101, 189, 0.823);
     height: 230px;
-
+    gap: 20px;
 }
 
 .line{
@@ -262,7 +279,7 @@ header h2{
     justify-content: space-between;
     border-radius: 20px;
     margin-top: 40px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: 0px 0px 10px rgba(159, 101, 189, 0.823);
     height: 230px;
 }
 
@@ -271,6 +288,7 @@ header h2{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 30px;
 }
 
 .air-pressure {
@@ -303,3 +321,15 @@ header h2{
     font-weight: 600;
 }
 
+#map{
+    border-radius: 10px;
+}
+
+.map-wrapper{
+    padding: 40px 20px 20px 20px;
+    background-color: #fff;
+    margin-top: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(159, 101, 189, 0.823);
+
+}
