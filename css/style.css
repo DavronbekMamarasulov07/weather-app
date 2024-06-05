@@ -40,8 +40,33 @@ header h2{
     height: 60px;
 }
 
+.hero-content-main{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 100%;
+    color: #fff;
+    font-weight: 700;
+}
+
+.hero-content-time-name{
+    font-size: 18px;
+}
+
+.hero-content-data{
+    text-align: end;
+
+}
+
+#hero-content-time{
+    text-align: end;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+
 .search-form{
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 10px;
     max-width: 400px;
     border-radius: 30px;
     width: 100%;
@@ -175,4 +200,106 @@ header h2{
     font-size: 18px;
 }
 
+#weahter-card-left{
+    max-width: 550px;
+    width: 100%;
+    background-color: #fff;
+    padding: 30px 50px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px;
+    margin-top: 40px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 230px;
+
+}
+
+.line{
+    height: 100%;
+    width: 1px;
+    background: blueviolet;
+}
+
+.weahter-info-right, .weahter-info-left {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;    
+}
+
+.add-icon{
+    color: blueviolet;
+    font-size: 40px;
+}
+
+
+.add{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+}
+
+.add p{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.add p:first-child{
+    margin-bottom: 5px;
+}
+
+#weather-card-right{
+    max-width: 450px;
+    width: 100%;
+    background-color: #fff;
+    padding: 30px 40px; 
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px;
+    margin-top: 40px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 230px;
+}
+
+.weather-card-item{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.air-pressure {
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+    background-image: url(../images/air-pressure.png);
+    background-size: contain;
+}
+
+.compass{
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+    background-image: url(https://inquisitive-dolphin-236ac6.netlify.app/images/compass.svg);
+    background-size: contain;
+}
+
+.air-pressure{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#air-pressure{
+
+    font-size: 24px;
+    color: #000;
+    font-weight: 600;
+}
 
