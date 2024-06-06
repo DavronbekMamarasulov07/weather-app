@@ -42,7 +42,7 @@ const loadData = (city) =>{
         .then((response) => response.json())
         .then(data => {
             renderData(data);
-            updateMap(data.location.lat, data.location.lon); // Update map with new coordinates
+            updateMap(data.location.lat, data.location.lon); 
         });
 }
 
@@ -58,18 +58,14 @@ const searchCityWeather = (e) => {
      $searchInput.value = ""
 }
 
-// eventlisteners
 $searchForm.addEventListener("submit" , searchCityWeather )
 
 const $checkbox = document.querySelector("#theme");
 
-// Event listener for checkbox change
 $checkbox.addEventListener("change", function() {
     if (this.checked) {
-        // Checkbox is checked, set background color to black
         document.body.style.backgroundColor = "#4f4169";
     } else {
-        // Checkbox is not checked, set background color to white
         document.body.style.backgroundColor = "white";
     }
 });
